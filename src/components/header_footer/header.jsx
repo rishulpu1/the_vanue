@@ -1,14 +1,15 @@
-import React from 'react';
+import React,{useState, useEffect} from 'react';
 import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 
 import SideDrawer from './SideDrawer';
 const Header = ()=> {
+    const [openDrawer, setOpenDrawer] = useState(false);
+    const toggleDrawer = ()=> {
+        setOpenDrawer(prevState => !prevState)
+    }
     return (
     <>
         <AppBar
@@ -27,10 +28,11 @@ const Header = ()=> {
                 <IconButton
                     aria-label='Menu'
                     color='inherit'
+                    onClick={toggleDrawer}
                 >
                     <MenuIcon />
                 </IconButton>
-                <SideDrawer />
+                <SideDrawer open={openDrawer} onClose={toggleDrawer} />
             </Toolbar>
         </AppBar>
         
