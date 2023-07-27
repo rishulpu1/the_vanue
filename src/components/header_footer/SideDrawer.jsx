@@ -10,7 +10,7 @@ const SideDrawer = (props)=>{
         {where: 'location', value: 'Location'},
     ]
     const renderItems = (item) => (
-        <ListItem button onClick={()=>{alert(item.where)}} >{item.value}</ListItem>
+        <ListItem button onClick={()=>{alert(item.where)}} key={item.where} >{item.value}</ListItem>
     );
     return(
         <Drawer
@@ -19,7 +19,7 @@ const SideDrawer = (props)=>{
             onClose={props.onClose}
         >
             <List component="nav">
-                {links.map((item)=> renderItems(item))}
+                {links.map((item, idx)=> renderItems(item, idx))}
             </List>
         </Drawer>
     );
