@@ -3,6 +3,7 @@ import Header from './components/header_footer/header';
 import Footer from './components/header_footer/footer';
 import Featured from './components/featured';
 import VenueInfo from './components/venueInfo';
+import Highlights from './components/highlights';
 const App = () => {
   return (
     <div className='App'>
@@ -12,6 +13,9 @@ const App = () => {
       </>
       <>
       <VenueInfo />
+      </>
+      <>
+      <Highlights />
       </>
       <div style={{backgroundColor: 'red', height: '800px'}}>
         
