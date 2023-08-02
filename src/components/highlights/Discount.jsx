@@ -1,6 +1,6 @@
 import React,{useState, useEffect} from "react";
 import { Fade, Slide } from "react-awesome-reveal";
-
+import MyButton from "../utils/MyButton";
 const Discount = ()=> {
     const end = 30
     const [start, setStart] = useState(0);
@@ -36,6 +36,13 @@ const Discount = ()=> {
                     <div className="discount_description">
                         <h3>Purchase Before Offer Expires</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquam molestie sollicitudin. Maecenas tempus pretium libero, facilisis placerat est. Nunc vel risus viverra, pellentesque lacus vel, rhoncus nisi. Nam eget purus aliquet, lacinia orci eu, tempus dui. Cras blandit quis turpis id bibendum. Nulla facilisi. Integer egestas interdum metus, vitae mattis nunc consequat molestie. Quisque egestas suscipit massa et fringilla.</p>
+                        <MyButton 
+                        text="Purchase Tickets"
+                        style={{
+                            background: '#ffa800'
+                        }}
+                        ticketIcon = {true}
+                        />
                     </div>
                 </Slide>
             </div>
