@@ -4,6 +4,7 @@ import Footer from './components/header_footer/footer';
 import Featured from './components/featured';
 import VenueInfo from './components/venueInfo';
 import Highlights from './components/highlights';
+import Pricing from './components/pricing';
 const App = () => {
   return (
     <div className='App'>
@@ -16,6 +17,9 @@ const App = () => {
       </>
       <>
       <Highlights />
+      </>
+      <>
+        <Pricing />
       </>
       <div style={{backgroundColor: 'red', height: '800px'}}>
         
