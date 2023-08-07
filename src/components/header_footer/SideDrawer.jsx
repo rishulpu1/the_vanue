@@ -1,6 +1,7 @@
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
+import { scroller } from 'react-scroll';
 const SideDrawer = (props)=>{
     const links = [
         {where: 'featured', value: 'To top'},
@@ -9,8 +10,17 @@ const SideDrawer = (props)=>{
         {where: 'pricing', value: 'Pricing'},
         {where: 'location', value: 'Location'},
     ]
+    const scrollToElement = (element)=>{
+        scroller.scrollTo(element,{
+            duration: 1500,
+            delay: 100,
+            smooth: true,
+            offset: -150
+        });
+        props.onClose(false);
+    }
     const renderItems = (item) => (
-        <ListItem button onClick={()=>{alert(item.where)}} key={item.where} >{item.value}</ListItem>
+        <ListItem button onClick={()=>scrollToElement(item.where)} key={item.where} >{item.value}</ListItem>
     );
     return(
         <Drawer
