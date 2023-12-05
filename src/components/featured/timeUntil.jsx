@@ -39,7 +39,7 @@ const TimeUntil = ()=>{
     
     
     useEffect(()=>{
-        setInterval(()=> getTimeUntil('Sep, 05, 2023, 07:10:00'), 1000);
+        setInterval(()=> getTimeUntil('Sep, 05, 2024, 07:10:00'), 1000);
     },[getTimeUntil]);
     return(
         <Slide left delay={1000}>
